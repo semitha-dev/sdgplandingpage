@@ -1,1 +1,77 @@
-/* css/cards.css — owner: Sanuka. Type your code below this line. */
+/* =========================================================
+   cards.css — Sanuka
+   Features grid, roadmap strip, How-we-work steps
+   ========================================================= */
+
+/* ---------- Features ---------- */
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.feature {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 18px 16px 28px;
+  min-height: 136px;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.feature:hover { border-color: #b9cfe2; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15, 42, 46, .06); }
+.feature__num { font: 500 10px/1 var(--font-body); color: var(--blue-dark); margin-bottom: 12px; display: block; }
+.feature h3 { font-size: 15px; margin-bottom: 10px; }
+.feature p { font-size: 11.5px; color: var(--muted); line-height: 1.55; }
+
+/* ---------- Roadmap strip ---------- */
+.roadmap { margin-top: 32px; padding: 16px; background: #e8ece8; }
+.roadmap__label {
+  font: 500 9.5px/1 var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+.roadmap__items { font: 500 14px/1.4 var(--font-head); margin-bottom: 10px; }
+.roadmap__items span:not(:last-child)::after { content: " · "; padding: 0 4px; }
+.roadmap__note { font-size: 10.5px; color: var(--muted); }
+
+/* ---------- How we work ---------- */
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.step {
+  background: #fff;
+  padding: 20px 16px 36px;
+  min-height: 170px;
+  transition: transform .2s, box-shadow .2s;
+}
+.step:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15, 42, 46, .07); }
+.step__head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.step__num {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: #e1edf8;
+  color: var(--blue-dark);
+  display: grid; place-items: center;
+  font: 500 13px var(--font-head);
+}
+.step__tag {
+  font: 600 8.5px/1 var(--font-body);
+  color: var(--blue-dark);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+.step h3 { font-size: 17px; margin-bottom: 12px; }
+.step p { font-size: 11.5px; color: var(--muted); }
+
+.connected { display: grid; grid-template-columns: 190px 1fr; gap: 24px; margin-top: 32px; align-items: center; }
+.connected__label {
+  font: 600 9px/1 var(--font-body);
+  text-transform: uppercase;
+  color: var(--blue-dark);
+  letter-spacing: .03em;
+}
+.connected__text { font-size: 12px; color: var(--ink-soft); }
+
+@media (max-width: 960px) {
+  .feature-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .feature-grid, .steps-grid { grid-template-columns: 1fr; }
+  .connected { grid-template-columns: 1fr; gap: 8px; }
+}
+
