@@ -1,1 +1,48 @@
 <!-- index.html — owner: Hasiru. Type your code below this line. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harborly — Freight management for sea cargo consolidation forwarders</title>
+  <meta name="description" content="Harborly is a web-based freight management platform for small sea-cargo consolidation forwarders. From cargo intake to payment and release." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Hasiru -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <!-- Kithnuka -->
+  <link rel="stylesheet" href="css/hero.css" />
+  <!-- Rashen -->
+  <link rel="stylesheet" href="css/sections.css" />
+  <!-- Sanuka -->
+  <link rel="stylesheet" href="css/cards.css" />
+  <!-- Agitha -->
+  <link rel="stylesheet" href="css/cta.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- Each slot is replaced with the HTML file it points to (see js/main.js) -->
+  <div data-include="sections/header.html"></div>   <!-- Hasiru -->
+
+  <main id="top">
+    <div data-include="sections/hero.html"></div>     <!-- Kithnuka -->
+    <div data-include="sections/partners.html"></div> <!-- Rashen -->
+    <div data-include="sections/services.html"></div> <!-- Rashen -->
+    <div data-include="sections/about.html"></div>    <!-- Rashen -->
+    <div data-include="sections/features.html"></div> <!-- Sanuka -->
+    <div data-include="sections/cta.html"></div>      <!-- Agitha -->
+    <div data-include="sections/how.html"></div>      <!-- Sanuka -->
+  </main>
+
+  <div data-include="sections/footer.html"></div>   <!-- Agitha -->
+
+  <script src="js/header.js"></script>   <!-- Hasiru -->
+  <script src="js/tracking.js"></script> <!-- Kithnuka -->
+  <script src="js/content.js"></script>  <!-- Sanuka -->
+  <script src="js/main.js"></script>     <!-- Hasiru (must be last) -->
+</body>
+</html>

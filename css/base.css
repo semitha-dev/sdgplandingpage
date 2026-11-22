@@ -1,1 +1,135 @@
 /* css/base.css — owner: Hasiru. Type your code below this line. */
+/* =========================================================
+   base.css — Hasiru
+   Design tokens, reset, layout, buttons, shared text styles
+   ========================================================= */
+
+:root {
+  --ink: #0f2a2e;
+  --ink-soft: #4b5b60;
+  --muted: #6b7a80;
+  --line: #dfe3e3;
+
+  --cream: #f4f4ef;
+  --blue-soft: #d3e5f3;
+  --blue: #3a8ee6;
+  --blue-btn: #3b8fe8;
+  --blue-dark: #1557a8;
+  --blue-logo: #1e7be0;
+  --navy: #032d4f;
+  --lime: #d8f36a;
+
+  --font-head: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius: 6px;
+  --container: 1180px;
+  --header-h: 72px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 500; }
+p { margin: 0; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border: 0;
+  border-radius: var(--radius);
+  font: 500 14px/1 var(--font-head);
+  cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn .arrow { font-size: 12px; }
+
+.btn--primary { background: var(--blue-btn); color: #fff; min-width: 164px; }
+.btn--primary:hover { background: #2f80d6; }
+.btn--dark { background: var(--blue-dark); color: #fff; box-shadow: 0 4px 10px rgba(21, 87, 168, .25); }
+.btn--dark:hover { background: #10488d; }
+.btn--white { background: #fff; color: var(--ink); min-width: 116px; }
+.btn--white:hover { background: #f1f4f6; }
+.btn--shadow { box-shadow: 0 6px 16px rgba(3, 45, 79, .25); }
+.btn--sm { padding: 10px 14px; font-size: 13px; min-width: 0; }
+
+/* ---------- Eyebrows / section text ---------- */
+.eyebrow {
+  font: 500 11px/1 var(--font-body);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.eyebrow--light { color: rgba(255, 255, 255, .85); }
+.eyebrow--lime { color: var(--lime); }
+
+.section { padding: 96px 0; }
+.section--tight-top { padding-top: 24px; }
+.section--blue { background: var(--blue-soft); }
+.section--cream { background: var(--cream); }
+
+.section__title {
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin-bottom: 10px;
+}
+.section__title--md { font-size: clamp(28px, 2.8vw, 36px); margin-bottom: 28px; }
+.section__sub { color: var(--ink-soft); margin-bottom: 56px; }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Load error banner (shown if sections fail to load) ---------- */
+.load-error {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 16px 20px;
+  border: 1px solid #f1b8ad;
+  border-radius: var(--radius);
+  background: #fff4f2;
+  color: #8a2c1c;
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .section { padding: 72px 0; }
+  .section--tight-top { padding-top: 8px; }
+}
