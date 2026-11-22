@@ -1,0 +1,11 @@
+hero-ship.jpg
+  "Container ship Express Black Sea in Fremantle Harbour, April 2026 01" - Wikimedia Commons, CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Container_ship_Express_Black_Sea_in_Fremantle_Harbour,_April_2026_01.jpg
+
+port-aerial.jpg
+  "Aerial image of the Bremerhaven container terminal (view from the southeast)" - Wikimedia Commons, CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_Bremerhaven_container_terminal_(view_from_the_southeast).jpg
+
+port-worker.jpg (cropped)
+  "Dock worker guinding container lift operator" - Wikimedia Commons, public domain
+  https://commons.wikimedia.org/wiki/File:Dock_worker_guinding_container_lift_operator.JPEG

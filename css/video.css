@@ -1,0 +1,17 @@
+.video-band { padding: 80px 0 96px; background: var(--cream); }
+.video-band__head { text-align: center; }
+.video-band__head .section__title { margin-bottom: 32px; }
+.video-frame {
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0f2f37;
+  box-shadow: 0 24px 48px rgba(15, 42, 46, .16);
+}
+.video-frame video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #0f2f37; }
+
+@media (max-width: 600px) {
+  .video-band { padding: 56px 0 72px; }
+  .video-frame { border-radius: 10px; }
+}

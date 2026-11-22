@@ -1,1 +1,37 @@
-<!-- sections/hero.html — owner: PVS Kithnuka. Type your code below this line. -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light">For sea cargo consolidation forwarders</p>
+      <h1 class="hero__title">Moving cargo.<br />Connecting<br />possibilities.</h1>
+      <p class="hero__lead">
+        From the first mile to the final destination, we make global shipping feel closer.
+        Reliable freight. Real people. One seamless journey.
+      </p>
+      <div class="hero__actions">
+        <a href="#services" class="btn btn--primary">Explore our services <span class="arrow">↗</span></a>
+        <a href="#features" class="btn btn--white">See the features</a>
+      </div>
+    </div>
+
+    <div class="track-card">
+      <h2 class="track-card__title">Track your shipment</h2>
+      <form class="track-form" id="trackForm" novalidate>
+        <label for="hbl" class="track-form__label">House bill of lading number</label>
+        <div class="track-form__row">
+          <input type="text" id="hbl" name="hbl" placeholder="Enter your HBL number" autocomplete="off" />
+          <button type="submit" class="btn btn--primary btn--sm">Check status</button>
+        </div>
+        <p class="track-form__hint" id="trackHint">No login needed for your family to check.</p>
+      </form>
+
+      <ol class="track-steps" id="trackSteps">
+        <li class="is-done">Received at warehouse.</li>
+        <li class="is-done">Loaded in container.</li>
+        <li>At sea.</li>
+        <li>Cleared and ready to collect.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="container"><hr class="hero__rule" /></div>
+</section>
