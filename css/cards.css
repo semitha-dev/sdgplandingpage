@@ -73,5 +73,7 @@
 @media (max-width: 600px) {
   .feature-grid, .steps-grid { grid-template-columns: 1fr; }
   .connected { grid-template-columns: 1fr; gap: 8px; }
+  .connected { grid-template-columns: 1fr; gap: 8px; }
+
 }
 
